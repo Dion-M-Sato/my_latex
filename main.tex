@@ -1,6 +1,6 @@
 \documentclass[uplatex,a4j,11pt]{jsreport}
 \renewcommand{\abstractname}{要旨}
-%\renewcommand{\baselinestretch}{1.1}
+\renewcommand\baselinestretch{0.8}
 \usepackage[vdivide={3cm,,3cm}]{geometry}
 \usepackage{fixltx2e}
 \usepackage{setspace}
@@ -22,6 +22,7 @@
 \usepackage{plext} %傍点をふる
 \usepackage{pxrubrica} %ルビをつける
 \usepackage{comment} %コメント環境の用意
+\usepackage{siunitx} %% SI単位系の出力
 \setcounter{tocdepth}{3}
 \renewcommand{\thefootnote}{\arabic{footnote}}
 \renewcommand\UrlFont{\rmfamily}
@@ -40,6 +41,11 @@
 \title{}
 \author{}
 \date{}
+
+% prevent hyphenation
+\hyphenpenalty=10000\relax
+\exhyphenpenalty=10000\relax
+\sloppy
 
 \begin{document}
 \maketitle
