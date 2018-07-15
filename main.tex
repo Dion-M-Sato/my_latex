@@ -21,7 +21,7 @@
 \usepackage{pxrubrica} %ルビをつける
 \usepackage{comment} %コメント環境の用意
 \usepackage{siunitx} %% SI単位系の出力
-\usepackage{listings} %%ソースコードのフォント変える
+\usepackage{listings,jslistings} %%ソースコードのフォント変える
 \setcounter{tocdepth}{3}
 \renewcommand{\thefootnote}{\arabic{footnote}}
 \usepackage[dvipdfmx]{graphicx}
@@ -35,6 +35,25 @@
    \centering\includegraphics[#1]{#2}
    \caption{#3}\label{fig:#4}
 \end{figure}}
+
+\lstset{ %ここからソースコードの表示に関する設定
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex
+}
 
 \title{}
 \author{}
